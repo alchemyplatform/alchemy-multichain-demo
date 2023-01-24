@@ -2,12 +2,13 @@ import { Alchemy, AlchemySettings, Network } from 'alchemy-sdk';
 
 /**
  * This is a wrapper around the Alchemy class that allows you to use the same
- * Alchemy object to make requests to multiple networks.
+ * Alchemy object to make requests to multiple networks using different
+ * settings.
  *
- * When instantiating this class, you can pass in an `AlchemySettings` object to
- * apply the same settings to all networks. You can also pass in a
- * `AlchemyMultichainSettings` object to apply different settings to each
- * network.
+ * When instantiating this class, you can pass in an `AlchemyMultiChainSettings`
+ * object to apply the same settings to all networks. You can also pass in an
+ * optional `overrides` object to apply different settings to specific
+ * networks.
  */
 export class AlchemyMultichainClient {
   readonly settings: AlchemyMultichainSettings;
