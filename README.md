@@ -7,5 +7,8 @@ To get started, clone this repo. Then, run `npm install` to install the dependen
 demo, run `npm run demo`.
 
 The `src/alchemy-multi-chain-client.ts` file contains the `AlchemyMultiChainClient` class, which
-is a wrapper around the Alchemy SDK that allows you to use multiple chains in a single application.
+is a wrapper around the Alchemy SDK that allows using multiple chains in a single application.
 The `src/index.ts` file contains a simple demo of how to use the `AlchemyMultiChainClient` class.
+
+Please feel free to copy or modify this sample implementation to suit your needs in your own
+projects!
