@@ -1,7 +1,6 @@
 import {
-  AlchemyMultiChainClient,
-  AlchemyMultiChainSettings
-} from './alchemy-multi-chain-client';
+  AlchemyMultichainClient,
+} from './alchemy-multichain-client';
 import { Network } from 'alchemy-sdk';
 
 async function main() {
@@ -13,10 +12,10 @@ async function main() {
   // Include optional setting overrides for specific networks.
   const overrides = {
     // TODO: Replace with your API keys.
-    [Network.MATIC_MAINNET]: { apiKey: 'matic-api-key', maxRetries: 10},
+    [Network.MATIC_MAINNET]: { apiKey: 'matic-api-key', maxRetries: 10 },
     [Network.ARB_MAINNET]: { apiKey: 'arb-api-key' }
   };
-  const alchemy = new AlchemyMultiChainClient(defaultConfig, overrides);
+  const alchemy = new AlchemyMultichainClient(defaultConfig, overrides);
 
   // get NFTs in multiple networks
   const owner = '0xd8da6bf26964af9d7eed9e03e53415d37aa96045';
