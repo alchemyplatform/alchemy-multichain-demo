@@ -1,6 +1,4 @@
-import {
-  AlchemyMultichainClient,
-} from './alchemy-multichain-client';
+import { AlchemyMultichainClient } from './alchemy-multichain-client';
 import { Network } from 'alchemy-sdk';
 
 async function main() {
