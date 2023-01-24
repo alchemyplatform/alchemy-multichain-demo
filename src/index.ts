@@ -7,11 +7,12 @@ import { Network } from 'alchemy-sdk';
 async function main() {
   // Default config to use for all networks.
   const defaultConfig = {
-    apiKey: 'demo', // Replace with your API key.
+    apiKey: 'demo', // TODO: Replace with your API key.
     network: Network.MATIC_MAINNET
   };
   // Include optional setting overrides for specific networks.
   const overrides = {
+    // TODO: Replace with your API keys.
     [Network.MATIC_MAINNET]: { apiKey: 'matic-api-key', maxRetries: 10},
     [Network.ARB_MAINNET]: { apiKey: 'arb-api-key' }
   };

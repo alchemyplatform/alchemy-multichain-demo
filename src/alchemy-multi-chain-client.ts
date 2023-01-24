@@ -48,16 +48,21 @@ export class AlchemyMultiChainClient {
    * @param network
    */
   private loadInstance(network: Network): Alchemy {
-    if (this.instances.has(network)) {
-      return this.instances.get(network)!;
-    } else {
-      const alchemy = new Alchemy({
-        ...this.settings,
-        network
-      });
-      this.instances.set(network, alchemy);
-      return alchemy;
+    if (!this.instances.has(network)) {
+      // Use overrides if they exist, otherwise use the default settings.
+      if (this.overrides && this.overrides[network]) {
+        this.instances.set(network, new Alchemy({
+          ...this.overrides[network],
+          network
+        }));
+      } else {
+        this.instances.set(network, new Alchemy({
+          ...this.settings,
+          network
+        }));
+      }
     }
+    return this.instances.get(network);
   }
 }
 
